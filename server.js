@@ -1,6 +1,6 @@
 const express = require("express");
 
-const PORT = 3000
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -8,6 +8,6 @@ app.get("/", function (request, response) {
     response.send("<h2>Привет Express!</h2>");
 });
 
-app.listen(PORT, () => {
+app.listen(port,  "0.0.0.0", () => {
     console.log(`Server has been started`)
 });
